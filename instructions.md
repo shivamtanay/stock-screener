@@ -6,9 +6,8 @@ Build a comprehensive stock screening tool that filters NSE and BSE listed compa
 ## Core Requirements
 
 1. **Market Universe Definition**
-   - Target both NSE and BSE listed stocks
-   - Focus on mid-cap range (₹100-10,000 Cr market capitalization)
-   - Handle dual-listed securities appropriately
+   - Get NSE listed stocks using the api /api/market-data-pre-open?key=ALL
+   - Then Focus on mid-cap range (₹100-10,000 Cr market capitalization). to do this use the api  (https://www.nseindia.com/api/quote-equity?symbol=RELIANCE) to filter the stocks and give the full list which follows the market cap criteria
 
 2. **Key Financial Screening Parameters**
    - Forward P/E ratio < 30 (calculated using growth projections)
