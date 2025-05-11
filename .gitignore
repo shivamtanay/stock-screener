@@ -41,6 +41,8 @@ stock_cache/
 ratings.txt
 ratings_cache/
 growth_analysis.txt
+commands
+instructions.md
 *.cache
 *.json
 !package.json
