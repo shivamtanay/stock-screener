@@ -1,4 +1,5 @@
 from exchange_data import ExchangeDataCollector
+from ratings_collector import RatingsCollector
 import logging
 import sys
 
@@ -10,8 +11,9 @@ def main():
     )
     logger = logging.getLogger(__name__)
     
-    # Initialize collector
+    # Initialize collectors
     collector = ExchangeDataCollector()
+    ratings_collector = RatingsCollector()
     
     # Get eligible stocks
     logger.info("Fetching eligible stocks...")
@@ -40,6 +42,9 @@ def main():
     
     # Display the results
     print(eligible_stocks[required_columns].head())
+    
+    # Collect ratings for all eligible stocks
+    ratings_collector.collect_ratings(eligible_stocks)
 
 if __name__ == "__main__":
     main() 
